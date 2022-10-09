@@ -1,3 +1,4 @@
+// Иерархия, объединённая в один файл
 public class ComputerTask {
     public interface Computer {
         default void Turn_on() {
