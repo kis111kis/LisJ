@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import static java.lang.Math.sqrt;
 public class Vector {
     double x, y, z;
@@ -42,42 +44,43 @@ public class Vector {
         return this;
     }
 
-        @Override
-        public int hashCode() {
-            int hash = 0;
-            char[]  x = Double.toString(this.x).toCharArray(),
-                    y = Double.toString(this.x).toCharArray(),
-                    z = Double.toString(this.x).toCharArray();
-            int prime = 27, mod = (int)1e7 + 7;
-            for (int i = 0; i < x.length; i++) {
-                hash = (hash * prime + (int)(x[i])) % mod;
-            }
-            for (int i = 0; i < y.length; i++) {
-                hash = (hash * prime + (int)(y[i])) % mod;
-            }
-            for (int i = 0; i < z.length; i++) {
-                hash = (hash * prime + (int)(z[i])) % mod;
-            }
-            return hash;
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        char[]  x = Double.toString(this.x).toCharArray(),
+                y = Double.toString(this.x).toCharArray(),
+                z = Double.toString(this.x).toCharArray();
+        int prime = 27, mod = (int)1e7 + 7;
+        for (int i = 0; i < x.length; i++) {
+            hash = (hash * prime + (int)(x[i])) % mod;
         }
+        for (int i = 0; i < y.length; i++) {
+            hash = (hash * prime + (int)(y[i])) % mod;
+        }
+        for (int i = 0; i < z.length; i++) {
+            hash = (hash * prime + (int)(z[i])) % mod;
+        }
+        return hash;
+    }
 
-        @Override
-        public boolean equals(Object obj) {
-            Vector other = (Vector) obj;
-            if (this == other)
-                return true;
-            if (x != other.x)
-                return false;
-            if (y != other.y)
-                return false;
-            if (z != other.z)
-                return false;
+    @Override
+    public boolean equals(Object obj) {
+        Vector other = (Vector) obj;
+        if (this == other)
             return true;
-        }
+        if (x != other.x)
+            return false;
+        if (y != other.y)
+            return false;
+        if (z != other.z)
+            return false;
+        return true;
+    }
 
     public static void main(String[] args) {
-        Vector vector1 = new Vector(3.6, 9, 12);
-        Vector vector2 = new Vector(-2, 4, -1);
+        Scanner sc = new Scanner(System.in);
+        Vector vector1 = new Vector(sc.nextDouble(), sc.nextDouble(), sc.nextDouble());
+        Vector vector2 = new Vector(sc.nextDouble(), sc.nextDouble(), sc.nextDouble());
         System.out.println("Длина первого вектора: " + vector1.length());
         System.out.println("Длина второго вектора: " + vector2.length());
         System.out.println("Скалярное произведение: " + vector1.scalarProduct(vector2));
