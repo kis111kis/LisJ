@@ -1,4 +1,3 @@
-import java.util.Objects;
 import static java.lang.Math.sqrt;
 public class Vector {
     double x, y, z;
@@ -43,7 +42,7 @@ public class Vector {
         return this;
     }
 
-//        @Override
+        @Override
         public int hashCode() {
             int hash = 0;
             char[]  x = Double.toString(this.x).toCharArray(),
