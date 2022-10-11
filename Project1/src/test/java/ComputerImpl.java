@@ -1,21 +1,19 @@
-public abstract class ComputerImpl implements Computer {
-    String processor, RAM, hard;
-    boolean is_turn_on = false;
+public abstract class ComputerImpl
+{
+    String maker;
+    String model;
 
-    public void Turn() {
-        if (is_turn_on) {
-            Turn_off();
-            is_turn_on = false;
-        } else {
-            Turn_on();
-            is_turn_on = true;
-        }
+    //так мы избавляемся от дублирующего кода
+    //в дальнейшем, все что нам нужно - переопределить метод toString
+    public String turnOn() {
+        return "Turn on "+getClass().getSimpleName()+" "+toString();
     }
 
-    public void Specifications() {
-        System.out.print(this.getClass().getSimpleName() + "\n" +
-                "с процессором: " + processor + "\n" +
-                "с оперативной памятью: " + RAM + "\n" +
-                "с жестким диском: " + hard + "\n");
+    public String turnOff() {
+        return "Turn on "+getClass().getSimpleName()+" "+toString();
+    }
+
+    public String connect() {
+        return "Connect to internet "+getClass().getSimpleName()+" "+toString();
     }
 }
