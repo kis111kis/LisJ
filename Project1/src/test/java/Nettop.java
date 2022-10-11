@@ -4,16 +4,4 @@ public class Nettop extends DesktopComputer {
         this.RAM = RAM;
         this.hard = hard;
     }
-
-    @Override
-    public void Turn() {
-        super.Specifications();
-        super.Turn();
-    }
-
-    @Override
-    public void Internet() {
-        super.Specifications();
-        super.Internet();
-    }
 }

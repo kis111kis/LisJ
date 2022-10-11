@@ -9,20 +9,8 @@ public class Desktop extends DesktopComputer {
     }
 
     @Override
-    public void Specifications() {
-        super.Specifications();
-        System.out.println("с видеокартой: " + videocard);
-    }
-
-    @Override
-    public void Turn() {
-        Specifications();
-        super.Turn();
-    }
-
-    @Override
-    public void Internet() {
-        Specifications();
-        super.Internet();
+    public String toString() {
+        super.toString();
+        return "с видеокартой: " + videocard + "\n";
     }
 }

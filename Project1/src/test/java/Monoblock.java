@@ -9,14 +9,7 @@ public class Monoblock extends DesktopComputer {
     }
 
     @Override
-    public void Turn() {
-        super.Specifications();
-        super.Turn();
-    }
-
-    @Override
-    public void Internet() {
-        super.Specifications();
-        super.Internet();
+    public String toString() {
+        return super.toString() + "с монитором: " + screen.name() + "\n";
     }
 }

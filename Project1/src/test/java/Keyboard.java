@@ -1,5 +1,7 @@
 public class Keyboard {
-    String name;
+    private String name;
 
     public Keyboard(String name) { this.name = name; }
+
+    public String name() { return name; }
 }

@@ -3,22 +3,9 @@ public abstract class PortableComputer extends ComputerImpl {
     Screen screen;
 
     @Override
-    public void Specifications() {
-        System.out.print("Портативный компьютер ");
-        super.Specifications();
-        System.out.println("с клавиатурой: " + keyboard.name);
-        System.out.println("с монитором: " + screen.name);
-    }
-
-    @Override
-    public void Turn() {
-        Specifications();
-        super.Turn();
-    }
-
-    @Override
-    public void Internet() {
-        Specifications();
-        super.Internet();
+    public String toString() {
+        return "PortableComputer\n" + super.toString() +
+        "с клавиатурой: " + keyboard.name() + "\n" +
+        "с монитором: " + screen.name() + "\n";
     }
 }

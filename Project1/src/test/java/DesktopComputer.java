@@ -1,7 +1,6 @@
 public abstract class DesktopComputer extends ComputerImpl {
     @Override
-    public void Specifications() {
-        System.out.print("Настольный компьютер ");
-        super.Specifications();
+    public String toString() {
+        return "DesktopComputer\n" + super.toString();
     }
 }

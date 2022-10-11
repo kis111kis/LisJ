@@ -1,5 +1,7 @@
 public class Screen {
-    String name;
+    private String name;
 
     public Screen(String name) { this.name = name; }
+
+    public String name() { return name; }
 }
