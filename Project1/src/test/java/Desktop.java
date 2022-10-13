@@ -10,7 +10,6 @@ public class Desktop extends DesktopComputer {
 
     @Override
     public String toString() {
-        super.toString();
-        return "с видеокартой: " + videocard + "\n";
+        return super.toString() + "с видеокартой: " + videocard + "\n";
     }
 }
